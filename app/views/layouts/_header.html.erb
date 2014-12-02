@@ -5,8 +5,9 @@
 		</div>
 		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 	    	<ul class="nav navbar-nav navbar-right">
-	      		<li><%= link_to "Projects", projects_path %></li>
-	      		<li><%= link_to "Contact", contact_path %></li>
+	    		<li class=<%= action_name == "home" ? "active" : "" %> ><%= link_to "Home", root_path %></li>
+	      		<li class=<%= action_name == "projects" ? "active" : "" %> ><%= link_to "Projects", projects_path %></li>
+	      		<li class=<%= action_name == "contact" ? "active" : "" %> ><%= link_to "Contact", contact_path %></li>
 	      	</ul>
     	</div>
 	</div>
