@@ -48,3 +48,4 @@ group :production do
 end
 
 gem 'bootstrap-sass'
+gem 'newrelic_rpm'
