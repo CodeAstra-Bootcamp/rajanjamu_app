@@ -7,7 +7,8 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'static_pages#home'
   get 'projects' => 'static_pages#projects'
-  get 'contact' => 'static_pages#contact'
+  get 'contact' => 'contacts#new'
+  resources :contacts
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

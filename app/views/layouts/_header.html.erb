@@ -5,9 +5,9 @@
 		</div>
 		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 	    	<ul class="nav navbar-nav navbar-right">
-	    		<li class=<%= action_name == "home" ? "active" : "" %> ><%= link_to "Home", root_path %></li>
-	      		<li class=<%= action_name == "projects" ? "active" : "" %> ><%= link_to "Projects", projects_path %></li>
-	      		<li class=<%= action_name == "contact" ? "active" : "" %> ><%= link_to "Contact", contact_path %></li>
+	    		<li class = <%= (action_name == "home") && (controller_name == "static_pages") ? "active" : "" %> ><%= link_to "Home", root_path %></li>
+	      		<li class = <%= (action_name == "projects") && (controller_name == "static_pages") ? "active" : "" %> ><%= link_to "Projects", projects_path %></li>
+	      		<li class = <%= (action_name == "new") && (controller_name == "contacts") ? "active" : "" %> ><%= link_to "Contact", contact_url %></li>
 	      	</ul>
     	</div>
 	</div>
