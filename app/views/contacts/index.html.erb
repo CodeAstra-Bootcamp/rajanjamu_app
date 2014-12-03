@@ -1,0 +1,13 @@
+<div class="page-header">
+  <h1>Conctact Queries</h1>
+</div>
+
+<% @contact.each do |c| %>
+	<div class = "row">
+		<div class = "col-md-6 col-md-offset-3">
+			<ul>
+				<li><%= c.message %> ( <%= c.email %> )</li>
+			</ul>
+		</div>
+	</div>
+<% end %>

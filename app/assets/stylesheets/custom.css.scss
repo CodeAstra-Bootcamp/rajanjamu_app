@@ -1,6 +1,12 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+@mixin box_sizing {
+  -moz-box-sizing:    border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing:         border-box;
+}
+
 .navbar-fixed-top {
   position: fixed; /* <-- Look here */
   right: 0;
@@ -15,6 +21,7 @@
 	margin-left: auto;
 	margin-right: auto;
 	text-align: center;
+	border: 0;
 }
 
 #content{
@@ -49,3 +56,25 @@ p {
 	}
 }
 
+.debug_dump {
+  clear: both;
+  float: left;
+  width: 100%;
+  margin-top: 45px;
+  @include box_sizing;
+}
+
+input, textarea, select, .uneditable-input {
+  border: 1px solid #bbb;
+  width: 100%;
+  margin-bottom: 15px;
+  @include box_sizing;
+}
+
+input {
+  height: auto !important;
+}
+
+.contact_message_box {
+	height: 150px;
+}
