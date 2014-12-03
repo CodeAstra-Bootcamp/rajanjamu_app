@@ -6,8 +6,9 @@ class UserMailer < ActionMailer::Base
   #
   #   en.user_mailer.contact.subject
   #
-  def contact
-    # @user_email = var.email
+  def contact(var)
+    @user_email = var.email
+    @user_message = var.message
     mail to: "rajanjamu@gmail.com", subject: "Contact Us"
   end
 end

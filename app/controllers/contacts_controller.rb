@@ -9,7 +9,7 @@ class ContactsController < ApplicationController
 		@contact.save
 		if @contact.save
 			flash[:success] = "Your message has been sent."
-			UserMailer.contact.deliver
+			UserMailer.contact(@contact).deliver
 			redirect_to root_path
 		else
 			render 'contact'
