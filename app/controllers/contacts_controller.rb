@@ -10,7 +10,6 @@ class ContactsController < ApplicationController
 		if @contact.save
 			flash[:success] = "Your message has been sent."
 			UserMailer.contact.deliver
-			# byebug
 			redirect_to root_path
 		else
 			render 'contact'

@@ -1,5 +1,5 @@
 class UserMailer < ActionMailer::Base
-  default from: "from@example.com"
+  default from: "noreply@example.com"
 
   # Subject can be set in your I18n file at config/locales/en.yml
   # with the following lookup:
@@ -7,8 +7,7 @@ class UserMailer < ActionMailer::Base
   #   en.user_mailer.contact.subject
   #
   def contact
-    @greeting = "Hi"
-
-    mail to: "rajanjamu@gmail.com"
+    # @user_email = var.email
+    mail to: "rajanjamu@gmail.com", subject: "Contact Us"
   end
 end
